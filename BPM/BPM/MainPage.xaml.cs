@@ -8,7 +8,8 @@ namespace BPM
     public partial class MainPage : ContentPage
     {
         private readonly List<DateTime> tapTimes;
-        private FontSizeConverter converter;
+        private readonly FontSizeConverter converter;
+        
         public MainPage()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace BPM
             tapTimes.Clear();
             BpmLabel.FontSize = 30;
             BpmLabel.Text = "Current beats per minute";
+        }
+
+        public void ComeAlive(string message)
+        {
+            BpmLabel.Text = message;
         }
     }
 }
