@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BPM.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="1"
+            Text="Current beats per minute"
+            HorizontalOptions="Center"
+            FontSize="30"
+            x:Name ="BpmLabel"
+            />
+
+        <Button
+            Grid.Row="2"
+            Text="Tap here"
+            WidthRequest="100"
+            HorizontalOptions="Center"
+            Clicked="BPM_Button_Click"
+            />
+
+        <Button
+            Grid.Row="3"
+            Text="Reset"
+            WidthRequest="100"
+            HorizontalOptions="Center"
+            Clicked="BPM_Reset_Click"
+            />
+
+    </Grid>
+
+</ContentPage>
