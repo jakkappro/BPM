@@ -11,8 +11,9 @@ namespace BPM
         public App()
         {
             InitializeComponent();
-
+            
             page = new MainPage();
+            MainPage = page;
         }
 
         protected override void OnStart()
