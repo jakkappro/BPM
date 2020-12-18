@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BPM.MainPage">
+             xmlns:vm="clr-namespace:BPM.ViewModels"
+             x:Class="BPM.Views.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageModel/>
+    </ContentPage.BindingContext>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,7 +19,7 @@
 
         <Label
             Grid.Row="1"
-            Text="Current beats per minute"
+            Text="{Binding BPM, StringFormat='{0:N0}'}"
             HorizontalOptions="Center"
             FontSize="30"
             x:Name ="BpmLabel"
@@ -25,7 +30,7 @@
             Text="Tap here"
             WidthRequest="100"
             HorizontalOptions="Center"
-            Clicked="BPM_Button_Click"
+            Command="{Binding TapCommand}"
             />
 
         <Button
@@ -33,7 +38,7 @@
             Text="Reset"
             WidthRequest="100"
             HorizontalOptions="Center"
-            Clicked="BPM_Reset_Click"
+            Command="{Binding ResetCommand}"
             />
 
     </Grid>

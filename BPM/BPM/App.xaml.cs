@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using BPM.Views;
 
 namespace BPM
 {
@@ -18,7 +19,6 @@ namespace BPM
 
         protected override void OnStart()
         {
-            page.ComeAlive("yo");
         }
 
         protected override void OnSleep()
